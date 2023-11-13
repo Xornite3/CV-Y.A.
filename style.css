@@ -1,32 +1,167 @@
+/* Me permet de créer les marges sur les côtés */
 body {
-  background-color: white;
-  font-family: ;
-  color: ;
-}
-
-.container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   color: black;
 }
 
+/* Taille police et couleur de texte*/
 h1 {
-  text-align: center;
-  font-size: 400%;
+  font-size: 450%;
   color: #27384c;
-  margin-right: 200px;
-  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
 }
-
 h2 {
   background-color: #39a6d0;
   color: white;
   padding: 8px;
   font-family: "Montserrat", sans-serif;
+  font-size: 110%;
+}
+h3 {
+  font-size: 115%;
+  font-family: "Montserrat", sans-serif;
+}
+li {
+  font-size: 95%;
+  font-family: "Montserrat", sans-serif;
+}
+p {
+  font-size: 95%;
+  font-family: "Montserrat", sans-serif;
+}
+td {
+  font-size: 95%;
+  font-family: "Montserrat", sans-serif;
 }
 
+/* Contour de l'image */
 img {
-  border-radius: 500px;
-  background: linear-gradient(to bottom, #74ccff, #e4e9ea);
+  border-radius: 100%;
+  border: 2.5px solid #39a6d0;
+}
+
+/* Gestion du header */
+header {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+header img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+header h1 {
+  margin: 0;
+  line-height: 1;
+}
+header h1 span {
+  display: block;
+}
+header h1 span:nth-child(1) {
+  transform: translateX(-60px);
+}
+
+/* Icon des infos de contact */
+.LinkedIn::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("./Img/LinkedIn_icon.svg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.Tel::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("./Img/Téléphone.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.Mail::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("./Img/Mail.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.Adresse::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("./Img/Globe.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+/* Icon de Hard skills */
+.Photoshop::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("./Img/adobe-photoshop-logo-0.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.Illustrator::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("./Img/adobe-Illustrator-logo-0-1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.Google::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("./Img/Google__G__Logo.svg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.Microsoft::after {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url("./Img/732221.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+/* Division en colone */
+.content {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Colone 1 et 2 */
+.col-1 {
+  width: 33%;
+}
+.col-2 {
+  flex: auto;
+}
+
+/* Cacher l'encadrer "Informations Personnels */
+.infos h2 {
+  display: none;
 }
