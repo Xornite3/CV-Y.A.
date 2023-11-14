@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 /* Me permet de créer les marges sur les côtés */
 body {
   max-width: 800px;
@@ -106,7 +110,7 @@ header h1 span:nth-child(1) {
 }
 
 /* Icon de Hard skills */
-.Photoshop::after {
+.Photoshop::before {
   content: "";
   display: inline-block;
   width: 25px;
@@ -116,7 +120,7 @@ header h1 span:nth-child(1) {
   background-repeat: no-repeat;
   vertical-align: middle;
 }
-.Illustrator::after {
+.Illustrator::before {
   content: "";
   display: inline-block;
   width: 25px;
@@ -126,7 +130,7 @@ header h1 span:nth-child(1) {
   background-repeat: no-repeat;
   vertical-align: middle;
 }
-.Google::after {
+.Google::before {
   content: "";
   display: inline-block;
   width: 20px;
@@ -136,7 +140,7 @@ header h1 span:nth-child(1) {
   background-repeat: no-repeat;
   vertical-align: middle;
 }
-.Microsoft::after {
+.Microsoft::before {
   content: "";
   display: inline-block;
   width: 15px;
@@ -147,18 +151,26 @@ header h1 span:nth-child(1) {
   vertical-align: middle;
 }
 
-/* Division en colone */
+/* Colone */
 .content {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 
-/* Colone 1 et 2 */
-.col-1 {
-  width: 33%;
-}
-.col-2 {
-  flex: auto;
+/* Responsive */
+@media (min-width: 768px) {
+  /* Division en colone */
+  .content {
+    flex-direction: row;
+  }
+  /* Colone 1 et 2 */
+  .col-1 {
+    width: 33%;
+  }
+  .col-2 {
+    flex: auto;
+  }
 }
 
 /* Cacher l'encadrer "Informations Personnels */
