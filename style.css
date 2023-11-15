@@ -67,6 +67,18 @@ header h1 span:nth-child(1) {
   transform: translateX(-60px);
 }
 
+/* Cacher les labels sauf pour les lecteurs d'écrans */
+.screen-reader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 /* Icon des infos de contact */
 .LinkedIn::before {
   content: "";
